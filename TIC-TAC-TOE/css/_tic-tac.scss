@@ -1,0 +1,109 @@
+@font-face {
+    font-family: "Fredoka One";
+    src: url("../fonts/FredokaOne-Regular.woff2") format("woff2"),
+        url("../fonts/FredokaOne-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Fredoka One";
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(74, 22, 156);
+    background: linear-gradient(180deg, rgba(112, 75, 189, 1) 28%, rgba(90, 35, 213, 1) 65%);
+    height: 100vh;
+    color: white;
+}
+
+H2 {
+    padding-bottom: 30px;
+    font-size: 40px;
+}
+.tic-tac-toe-cont {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background: rgb(74, 22, 156);
+    background: linear-gradient(0deg, rgba(74, 22, 156, 1) 28%, rgba(90, 35, 213, 1) 65%);
+    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        font-size: 25px;
+        font-weight: 500;
+        padding-bottom: 20px;
+    }
+
+    .result {
+        padding: 20px 0;
+        font-size: 25px;
+        height: 70px;
+    }
+
+    .board-cont {
+        position: relative;
+        width: 100%;
+        max-width: 285px;
+        height: 285px;
+        background-color: #704bbd;
+        border-radius: 20px;
+        border: 1px dashed white;
+        padding: 20px;
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            .cell {
+                width: 80px;
+                height: 80px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .img {
+                    width: 100%;
+                    max-width: 70px;
+                    img {
+                        width: 100%;
+                        object-fit: contain;
+                        object-position: center;
+                    }
+                }
+            }
+
+            #cell2,
+            #cell5,
+            #cell8 {
+                border-left: 1px dashed white;
+                border-right: 1px dashed white;
+            }
+        }
+
+        .row2 {
+            border-top: 1px dashed white;
+            border-bottom: 1px dashed white;
+        }
+    }
+
+    .turn {
+        padding-top: 20px;
+        height: 50px;
+    }
+}

@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "Fredoka One";
+    src: url("../fonts/FredokaOne-Regular.woff2") format("woff2"),
+        url("../fonts/FredokaOne-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Fredoka One";
+    position: relative;
+    height: 100vh;
+}
+h2 {
+    font-size: 50px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    flex-direction: column;
+
+    .first-input {
+        width: 100%;
+        max-width: 400px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        p {
+            padding-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            max-width: 100px;
+            height: 50px;
+            padding: 10px;
+            border: 2px solid black;
+            color: black;
+            font-size: 18px;
+            border-radius: 2px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .reset-btn {
+            width: 110px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 2px;
+            margin-top: 30px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+.around-squares {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+    .squares-cont {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 30px;
+
+        .square {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            input {
+                width: 50px;
+                height: 50px;
+                padding: 10px;
+                border: 1px solid red;
+                color: black;
+                font-size: 16px;
+                border-radius: 2px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    .add {
+        padding-left: 30px;
+        display: none;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    .minus {
+        font-size: 30px;
+        cursor: pointer;
+    }
+}
